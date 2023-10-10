@@ -97,13 +97,7 @@ AUDIENCE
 Explain who your audience is.  (In particular, tell readers if the
 workshop is only open to people from a particular institution.
 {% endcomment %}
-{% if site.carpentry == "swc" %}
-{% include swc/who.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/who.html %}
-{% endif %}
+{% include none/who.html %}
 
 {% comment %}
 LOCATION
@@ -166,7 +160,7 @@ Modify the block below if there are any special requirements.
   <strong>Requirements:</strong>
   {% if online == "false" %}
     Participants must bring a laptop with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.).
   {% else %}
     Participants must have access to a computer with a
     Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
@@ -259,23 +253,6 @@ Edit the text to match who can attend the workshop. For instance:
 
 <hr/>
 
-{% comment%}
-CODE OF CONDUCT
-{% endcomment %}
-<h2 id="code-of-conduct">Code of Conduct</h2>
-
-<p>
-Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
-</p>
-
-<p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
-    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
-  </a>
-</p>
-<hr/>
-
-
 {% comment %}
 Collaborative Notes
 
@@ -325,16 +302,7 @@ of code below the Schedule `<h2>` header below with
 
 <h2 id="schedule">Schedule</h2>
 
-{% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif site.carpentry == "incubator" %}
-This workshop is teaching a lesson in [The Carpentries Incubator](https://carpentries-incubator.org/).
-Please check [the lesson homepage]({{ site.incubator_lesson_site }}) for a list of lesson sections and estimated timings.
-{% endif %}
+{% include none/schedule.html %}
 
 {% comment %}
 Edit/replace the text above if you want to include a schedule table.
@@ -401,14 +369,5 @@ These are the installation instructions for the tools used
 during the workshop.
 {% endcomment %}
 
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/setup.html %}
-{% elsif site.carpentry == "incubator" %}
-Please check the "Setup" page of
-[the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
-to obtain the software and data you will need to follow the lesson.
-{% endif %}
+{% include none/setup.html %}
+
