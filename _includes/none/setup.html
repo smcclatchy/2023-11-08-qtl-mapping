@@ -49,10 +49,22 @@ setwd("~/Desktop/mapping")
 download.file("https://ndownloader.figshare.com/files/9746485", "./data/cc_variants.sqlite")
 download.file("https://ndownloader.figshare.com/files/9746458", "./data/mouse_genes.sqlite")
 download.file("https://ndownloader.figshare.com/files/9746452", "./data/mouse_genes_mgi.sqlite")
-download.file("ftp://ftp.jax.org/dgatti/qtl2_workshop/qtl2_demo.Rdata", "./data/qtl2_demo.Rdata") # Windows machines must add mode = "wb"
 ~~~
 {: .r}
 
+Mac and Linux machines can load the DO demonstration data with this code.
+
+~~~
+download.file(url="ftp://ftp.jax.org/dgatti/qtl2_workshop/qtl2_demo.Rdata", destfile="./data/qtl2_demo.Rdata")
+~~~
+{: .r}
+
+Windows machines must add the argument mode=wb to the download.file() command
+
+~~~
+download.file(url="ftp://ftp.jax.org/dgatti/qtl2_workshop/qtl2_demo.Rdata", destfile="./data/qtl2_demo.Rdata", mode = "wb")
+~~~
+{: .r}
 
 You will need these for the final lesson episodes on SNP association mapping and QTL
 analysis in Diversity Outbred mice.
